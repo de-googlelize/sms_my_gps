@@ -1,9 +1,10 @@
 apply plugin: 'com.android.application'
 
 apply from: '../constants.gradle'
-apply from: '../signing_config.gradle'
+//apply from: '../signing_config.gradle'
 
 android {
+/*
     signingConfigs {
         release {
             storeFile file('../signing_key.jks')
@@ -12,6 +13,7 @@ android {
             keyPassword project.ext.keyPassword
         }
     }
+*/
 
     compileSdkVersion project.ext.compileSdkVersion
     buildToolsVersion project.ext.buildToolsVersion
@@ -28,7 +30,7 @@ android {
         applicationId project.ext.applicationId
         versionName project.ext.releaseVersion
         versionCode project.ext.releaseVersionCode
-        signingConfig signingConfigs.release
+        //signingConfig signingConfigs.release
     }
 
     buildTypes {
